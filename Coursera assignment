@@ -1,0 +1,17 @@
+function [summa, index]=max_sum(v,n)    //v is the series and n is the number of consecutive numbers
+L=length(v);
+p=L-(n-1);
+if n>L
+    summa=0;
+    index=-1;
+else
+    summa=-inf;
+    for i=1:p
+       csumma=sum(v(i:(i+n-1)));
+       if csumma>summa
+           summa=csumma;
+           index=i;
+       end
+    end
+end
+end
